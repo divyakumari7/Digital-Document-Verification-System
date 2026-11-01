@@ -151,3 +151,4 @@ Both diagrams were compiled and verified in editable `.drawio`, vector `.pdf`, a
 
 ### 10.2 Conclusion
 The DFD model rigorously demonstrates the separation of concerns inside DDVS. By isolating account management, document registration, verification processing, and compliance logging into discrete functional units mediated by structured data stores, the design achieves high functional cohesion, eliminates unauthorized entity-to-store data coupling, and provides an actionable blueprint for implementation.
+

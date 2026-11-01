@@ -133,3 +133,4 @@ A complete UML Sequence Diagram representing the temporal interactions of docume
 
 ### 10.2 Conclusion
 The sequence diagram provides an accurate, chronologically ordered design specification. By mapping the exact interaction pathways between presentation, control, and persistence layers, it ensures that developers can implement robust, thread-safe, and verifiable client-server communication that strictly satisfies all functional and non-functional requirements of the SRS.
+

@@ -180,3 +180,4 @@ The end-to-end verification activity workflow of the Digital Document Verificati
 
 ### 10.2 Conclusion
 The activity diagram provides an unambiguous procedural specification for developers implementing the verification engine. By modeling explicit guard conditions, bypass routes for lightweight lookups, and guaranteed audit trails, the design ensures system security, operational transparency, and exact compliance with the SRS.
+
