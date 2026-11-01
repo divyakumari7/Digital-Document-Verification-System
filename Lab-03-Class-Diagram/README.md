@@ -8,6 +8,27 @@
 
 ---
 
+## Project and Team Information
+- **Project Title:** Digital Document Verification System (DDVS)
+- **Team Size:** 4 Members
+- **Project Team Members:**
+  1. Divya Kumari
+  2. Divyanshi Jaiswal
+  3. Divyanshi Khemani
+  4. Divyanshu Gupta
+- **Course / Subject:** B.Tech Computer Science & Engineering — Software Engineering Laboratory
+- **Authoritative Baseline:** IEEE-Standard SRS for DDVS v1.0 (August 31, 2026)
+
+---
+
+## Deliverables Summary and Moodle Submission Files
+- **Moodle Submission Document (DOCX):** [`DDVS_Lab03_Class_Diagram.docx`](DOCX/DDVS_Lab03_Class_Diagram.docx) *(Located in `DOCX/` subfolder with embedded diagram)*
+- **Editable Draw.io Diagram:** [`DDVS_Lab03_Class_Diagram.drawio`](DDVS_Lab03_Class_Diagram.drawio)
+- **Vector PDF Export:** [`DDVS_Lab03_Class_Diagram.pdf`](DDVS_Lab03_Class_Diagram.pdf)
+- **High-Resolution PNG Preview:** [`DDVS_Lab03_Class_Diagram.png`](DDVS_Lab03_Class_Diagram.png)
+
+---
+
 ## 3. Aim / Objective
 To systematically identify the object-oriented classes from the Software Requirements Specification (SRS) of the Digital Document Verification System (DDVS), classify them into strong, weak, dependent, and specialized entities, specify their attributes and operations with appropriate data types and visibilities, establish structural associations with well-justified multiplicities, and construct a standardized three-compartment UML Class Diagram.
 
