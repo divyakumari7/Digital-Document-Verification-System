@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-11-01T23:00:00.000Z" agent="Mozilla/5.0" version="24.7.17" type="device">
+  <diagram id="ddvs-architecture" name="3-Tier Logical Architecture">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="3-TIER LOGICAL ARCHITECTURE — DIGITAL DOCUMENT VERIFICATION SYSTEM (DDVS)" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=18;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="150" y="20" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Software Engineering Practical Lab 09 | Architectural Decomposition, Subsystem Boundaries &amp; Protocols" style="text;html=1;align=center;verticalAlign=middle;fontStyle=2;fontSize=12;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="250" y="50" width="700" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- TIER 1: PRESENTATION TIER -->
+        <mxCell id="box_tier1" value="TIER 1: PRESENTATION TIER (Web Client / User Interface)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;fontStyle=1;fontSize=13;strokeColor=#2F5597;strokeWidth=2;fillColor=#F8FBFF;spacingLeft=15;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="100" y="90" width="1000" height="170" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ui_verifier" value="&lt;b&gt;Verifier Portal&lt;/b&gt;&#xa;&lt;hr/&gt;• Alphanumeric ID Lookup&#xa;• QR Code Scanner&#xa;• PDF Document Upload" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="140" y="140" width="260" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ui_issuer" value="&lt;b&gt;Issuing Organization Console&lt;/b&gt;&#xa;&lt;hr/&gt;• Registration Request UI&#xa;• Document Issuance Form&#xa;• Issued Records Dashboard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="470" y="140" width="260" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ui_admin" value="&lt;b&gt;Administrator Console&lt;/b&gt;&#xa;&lt;hr/&gt;• Organization Approvals&#xa;• User &amp; Record Governance&#xa;• System Audit Log Viewer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="800" y="140" width="260" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- PROTOCOL 1: HTTPS -->
+        <mxCell id="conn_p1" value="HTTPS (HTTP over TLS 1.3) / RESTful JSON Payloads &amp; Multipart File Streams" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;fontStyle=1;fontColor=#17365D;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="600" y="270" as="sourcePoint" /><mxPoint x="600" y="340" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- TIER 2: APPLICATION BUSINESS LOGIC TIER -->
+        <mxCell id="box_tier2" value="TIER 2: APPLICATION BUSINESS LOGIC TIER (Application Server)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;fontStyle=1;fontSize=13;strokeColor=#2F5597;strokeWidth=2;fillColor=#FDFEFE;spacingLeft=15;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="100" y="350" width="1000" height="270" as="geometry" />
+        </mxCell>
+
+        <mxCell id="srv_acc" value="&lt;b&gt;Account Service&lt;/b&gt;&#xa;&lt;hr/&gt;• Auth &amp; Session Tokens&#xa;• Password Hashing&#xa;• Role-Based Access" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=10;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="140" y="400" width="200" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="srv_reg" value="&lt;b&gt;Registration Service&lt;/b&gt;&#xa;&lt;hr/&gt;• Metadata Ingestion&#xa;• Verification ID Gen&#xa;• QR Payload Encoding" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=10;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="380" y="400" width="200" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="srv_ver" value="&lt;b&gt;Verification Engine&lt;/b&gt;&#xa;&lt;hr/&gt;• Query Dispatcher&#xa;• Status Check&#xa;• Result Synthesis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=10;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="620" y="400" width="200" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="srv_log" value="&lt;b&gt;Audit Logger Service&lt;/b&gt;&#xa;&lt;hr/&gt;• Immutable Logging&#xa;• Verifier History&#xa;• Compliance Reporting" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=10;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="860" y="400" width="200" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="srv_hash" value="&lt;b&gt;Cryptographic Engine (IHashService)&lt;/b&gt;&#xa;&lt;hr/&gt;• SHA-256 Digest Computation&#xa;• Byte Stream Tamper Comparison" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=10;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="380" y="520" width="440" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- PROTOCOL 2: SQL / DATA ACCESS -->
+        <mxCell id="conn_p2" value="Relational Database Client / SQL Connection Pool / DAO Interfaces" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;fontSize=11;fontStyle=1;fontColor=#7D6608;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="600" y="630" as="sourcePoint" /><mxPoint x="600" y="700" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <!-- TIER 3: DATA PERSISTENCE TIER -->
+        <mxCell id="box_tier3" value="TIER 3: DATA PERSISTENCE TIER (Relational Database Storage)" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;fontStyle=1;fontSize=13;strokeColor=#2F5597;strokeWidth=2;fillColor=#F8FBFF;spacingLeft=15;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="100" y="710" width="1000" height="170" as="geometry" />
+        </mxCell>
+
+        <mxCell id="db_user" value="&lt;b&gt;User Store (D1)&lt;/b&gt;&#xa;&lt;hr/&gt;• Accounts &amp; Profiles&#xa;• Password Hashes&#xa;• Org Approval Status" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;fontSize=10;fontColor=#7D6608;" vertex="1" parent="1">
+          <mxGeometry x="180" y="760" width="220" height="95" as="geometry" />
+        </mxCell>
+
+        <mxCell id="db_doc" value="&lt;b&gt;Document Store (D2)&lt;/b&gt;&#xa;&lt;hr/&gt;• Document Metadata&#xa;• Stored SHA-256 Hashes&#xa;• QR Data &amp; Active Flags" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;fontSize=10;fontColor=#7D6608;" vertex="1" parent="1">
+          <mxGeometry x="490" y="760" width="220" height="95" as="geometry" />
+        </mxCell>
+
+        <mxCell id="db_log" value="&lt;b&gt;Verification Log Store (D3)&lt;/b&gt;&#xa;&lt;hr/&gt;• Immutable Audit Rows&#xa;• Timestamp &amp; Method&#xa;• Verification Verdicts" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;fontSize=10;fontColor=#7D6608;" vertex="1" parent="1">
+          <mxGeometry x="800" y="760" width="220" height="95" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

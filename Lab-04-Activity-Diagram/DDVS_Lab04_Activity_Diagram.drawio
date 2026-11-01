@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-11-01T20:30:00.000Z" agent="Mozilla/5.0" version="24.7.17" type="device">
+  <diagram id="ddvs-activity-diagram" name="UML Activity Diagram - Verification Workflow">
+    <mxGraphModel dx="1400" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="UML ACTIVITY DIAGRAM — DOCUMENT VERIFICATION WORKFLOW" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=18;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="250" y="20" width="850" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Software Engineering Practical Lab 04 | Partitioned (Swimlane) Verification &amp; Tamper Detection Flow" style="text;html=1;align=center;verticalAlign=middle;fontStyle=2;fontSize=12;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="350" y="50" width="650" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- SWIMLANES -->
+        <mxCell id="pool" value="Digital Document Verification System (DDVS)" style="swimlane;html=1;childLayout=stackLayout;startSize=30;horizontal=1;fillColor=#F8FBFF;strokeColor=#2F5597;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="90" width="1240" height="1140" as="geometry" />
+        </mxCell>
+
+        <!-- Lane 1: Verifier -->
+        <mxCell id="lane_verifier" value="Verifier (General User / External Verifier)" style="swimlane;html=1;startSize=30;fillColor=#FFFFFF;strokeColor=#2F5597;strokeWidth=1.5;fontSize=12;fontStyle=1;" vertex="1" parent="pool">
+          <mxGeometry y="30" width="380" height="1110" as="geometry" />
+        </mxCell>
+
+        <!-- Lane 2: DDVS System -->
+        <mxCell id="lane_system" value="DDVS Application Server &amp; Database" style="swimlane;html=1;startSize=30;fillColor=#FDFEFE;strokeColor=#2F5597;strokeWidth=1.5;fontSize=12;fontStyle=1;" vertex="1" parent="pool">
+          <mxGeometry x="380" y="30" width="860" height="1110" as="geometry" />
+        </mxCell>
+
+        <!-- NODES IN VERIFIER LANE -->
+        <!-- Initial Node -->
+        <mxCell id="init" value="" style="ellipse;fillColor=#000000;strokeColor=#000000;strokeWidth=2;" vertex="1" parent="lane_verifier">
+          <mxGeometry x="175" y="40" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Action: Open Verification Interface -->
+        <mxCell id="act_open" value="Open Verification Interface" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="lane_verifier">
+          <mxGeometry x="100" y="100" width="180" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Action: Submit Verification Request -->
+        <mxCell id="act_submit" value="Submit Verification Request&#xa;(Enter ID, Scan QR, or Upload File)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="lane_verifier">
+          <mxGeometry x="80" y="170" width="220" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Display Actions in Verifier Lane -->
+        <mxCell id="act_disp_notfound" value="Display &quot;Not Found&quot; Result" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FADBD8;strokeColor=#C0392B;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="lane_verifier">
+          <mxGeometry x="100" y="440" width="180" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_disp_tampered" value="Display &quot;Tampered&quot; Warning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FADBD8;strokeColor=#C0392B;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="lane_verifier">
+          <mxGeometry x="100" y="670" width="180" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_disp_invalid" value="Display &quot;Invalid / Revoked&quot; Result" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCF3CF;strokeColor=#B7950B;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="lane_verifier">
+          <mxGeometry x="100" y="870" width="180" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="act_disp_verified" value="Display &quot;Verified&quot; Result&#xa;&amp; Document Metadata" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D4EFDF;strokeColor=#229954;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="lane_verifier">
+          <mxGeometry x="100" y="990" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Final Merge & Final Node -->
+        <mxCell id="merge_final" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;" vertex="1" parent="lane_verifier">
+          <mxGeometry x="175" y="1060" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="final_node" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#2F5597;strokeWidth=2;" vertex="1" parent="lane_verifier">
+          <mxGeometry x="175" y="1110" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- NODES IN SYSTEM LANE -->
+        <!-- Receive & Parse -->
+        <mxCell id="act_receive" value="Receive Request &amp; Extract Document Identifier" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="lane_system">
+          <mxGeometry x="180" y="175" width="260" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Search DB -->
+        <mxCell id="act_search" value="Query Document Store for Matching Record" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="lane_system">
+          <mxGeometry x="180" y="240" width="260" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Decision 1: Record Found? -->
+        <mxCell id="dec_found" value="Record&#xa;Found?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="lane_system">
+          <mxGeometry x="270" y="310" width="80" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Action: Log Not Found -->
+        <mxCell id="act_log_notfound" value="Record Attempt as &quot;Not Found&quot; in Log Store" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;" vertex="1" parent="lane_system">
+          <mxGeometry x="20" y="380" width="220" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Action: Retrieve Record Details -->
+        <mxCell id="act_retrieve" value="Retrieve Stored Hash, Status &amp; Metadata" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="lane_system">
+          <mxGeometry x="380" y="390" width="240" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Decision 2: Hash Comparison Applicable? -->
+        <mxCell id="dec_file" value="File Uploaded?&#xa;(Hash Applicable)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;fontSize=10;fontStyle=1;" vertex="1" parent="lane_system">
+          <mxGeometry x="440" y="460" width="120" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Action: Compute & Compare Hash -->
+        <mxCell id="act_hash" value="Compute SHA-256 Hash of Submitted File&#xa;&amp; Compare with Stored Hash" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="lane_system">
+          <mxGeometry x="380" y="560" width="240" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Decision 3: Hash Matches? -->
+        <mxCell id="dec_match" value="Hash&#xa;Matches?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="lane_system">
+          <mxGeometry x="460" y="630" width="80" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Action: Log Tampered -->
+        <mxCell id="act_log_tampered" value="Record Attempt as &quot;Tampered&quot; in Log Store" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;" vertex="1" parent="lane_system">
+          <mxGeometry x="20" y="640" width="220" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Merge before status check -->
+        <mxCell id="merge_status" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;" vertex="1" parent="lane_system">
+          <mxGeometry x="485" y="730" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Decision 4: Record Status Active? -->
+        <mxCell id="dec_active" value="Status&#xa;Active?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="lane_system">
+          <mxGeometry x="460" y="790" width="80" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Action: Log Invalid -->
+        <mxCell id="act_log_invalid" value="Record Attempt as &quot;Invalid&quot; in Log Store" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;" vertex="1" parent="lane_system">
+          <mxGeometry x="20" y="840" width="220" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Action: Log Verified -->
+        <mxCell id="act_log_verified" value="Record Attempt as &quot;Verified&quot; in Log Store" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;fontStyle=1;" vertex="1" parent="lane_system">
+          <mxGeometry x="400" y="900" width="200" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- EDGES -->
+        <!-- init -> act_open -->
+        <mxCell id="e0" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="init" target="act_open"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- act_open -> act_submit -->
+        <mxCell id="e1" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="act_open" target="act_submit"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- act_submit -> act_receive -->
+        <mxCell id="e2" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="act_submit" target="act_receive"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- act_receive -> act_search -->
+        <mxCell id="e3" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="act_receive" target="act_search"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- act_search -> dec_found -->
+        <mxCell id="e4" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="act_search" target="dec_found"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- dec_found -> [No] -> act_log_notfound -->
+        <mxCell id="e5" value="[No]" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#C0392B;fontStyle=1;fontColor=#C0392B;" edge="1" parent="pool" source="dec_found" target="act_log_notfound"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- act_log_notfound -> act_disp_notfound -->
+        <mxCell id="e6" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="act_log_notfound" target="act_disp_notfound"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- act_disp_notfound -> merge_final -->
+        <mxCell id="e7" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="act_disp_notfound" target="merge_final"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- dec_found -> [Yes] -> act_retrieve -->
+        <mxCell id="e8" value="[Yes]" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#229954;fontStyle=1;fontColor=#229954;" edge="1" parent="pool" source="dec_found" target="act_retrieve"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- act_retrieve -> dec_file -->
+        <mxCell id="e9" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="act_retrieve" target="dec_file"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- dec_file -> [Yes] -> act_hash -->
+        <mxCell id="e10" value="[Yes: File Uploaded]" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;fontStyle=1;" edge="1" parent="pool" source="dec_file" target="act_hash"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- dec_file -> [No] -> merge_status -->
+        <mxCell id="e11" value="[No: ID / QR Only]" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;fontStyle=1;" edge="1" parent="pool" source="dec_file" target="merge_status">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="640" y="495" /><mxPoint x="640" y="745" /></Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- act_hash -> dec_match -->
+        <mxCell id="e12" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="act_hash" target="dec_match"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- dec_match -> [No] -> act_log_tampered -->
+        <mxCell id="e13" value="[No: Mismatch]" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#C0392B;fontStyle=1;fontColor=#C0392B;" edge="1" parent="pool" source="dec_match" target="act_log_tampered"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- act_log_tampered -> act_disp_tampered -->
+        <mxCell id="e14" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="act_log_tampered" target="act_disp_tampered"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- act_disp_tampered -> merge_final -->
+        <mxCell id="e15" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="act_disp_tampered" target="merge_final"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- dec_match -> [Yes] -> merge_status -->
+        <mxCell id="e16" value="[Yes: Matches]" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#229954;fontStyle=1;fontColor=#229954;" edge="1" parent="pool" source="dec_match" target="merge_status"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- merge_status -> dec_active -->
+        <mxCell id="e17" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="merge_status" target="dec_active"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- dec_active -> [No] -> act_log_invalid -->
+        <mxCell id="e18" value="[No: Revoked]" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#B7950B;fontStyle=1;fontColor=#B7950B;" edge="1" parent="pool" source="dec_active" target="act_log_invalid"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- act_log_invalid -> act_disp_invalid -->
+        <mxCell id="e19" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="act_log_invalid" target="act_disp_invalid"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- act_disp_invalid -> merge_final -->
+        <mxCell id="e20" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="act_disp_invalid" target="merge_final"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- dec_active -> [Yes] -> act_log_verified -->
+        <mxCell id="e21" value="[Yes: Active]" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#229954;fontStyle=1;fontColor=#229954;" edge="1" parent="pool" source="dec_active" target="act_log_verified"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- act_log_verified -> act_disp_verified -->
+        <mxCell id="e22" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="act_log_verified" target="act_disp_verified"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- act_disp_verified -> merge_final -->
+        <mxCell id="e23" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="act_disp_verified" target="merge_final"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- merge_final -> final_node -->
+        <mxCell id="e24" value="" style="endArrow=open;endFill=1;endSize=6;html=1;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="pool" source="merge_final" target="final_node"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-11-01T20:00:00.000Z" agent="Mozilla/5.0" version="24.7.17" type="device">
+  <diagram id="ddvs-class-diagram" name="UML Class Diagram - DDVS">
+    <mxGraphModel dx="1400" dy="950" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1350" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Diagram Title -->
+        <mxCell id="title" value="UML CLASS DIAGRAM — DIGITAL DOCUMENT VERIFICATION SYSTEM (DDVS)" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=18;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="250" y="20" width="850" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Software Engineering Practical Lab 03 | Standard 3-Compartment UML Class Notation" style="text;html=1;align=center;verticalAlign=middle;fontStyle=2;fontSize=12;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="350" y="50" width="650" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- CLASS: User -->
+        <mxCell id="class_user" value="&lt;p style=&quot;margin:0px;padding-top:4px;text-align:center;&quot;&gt;&lt;b&gt;User&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;- userId: String&lt;br/&gt;- name: String&lt;br/&gt;- email: String&lt;br/&gt;- passwordHash: String&lt;br/&gt;- role: String&lt;br/&gt;- isActive: Boolean&lt;br/&gt;- createdAt: DateTime&lt;/p&gt;&lt;hr/&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;+ register(): Boolean&lt;br/&gt;+ login(credentials): Boolean&lt;br/&gt;+ logout(): void&lt;br/&gt;+ changePassword(oldP, newP): Boolean&lt;br/&gt;+ viewVerificationHistory(): List&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1.5;strokeColor=#2F5597;fillColor=#EDF2F8;" vertex="1" parent="1">
+          <mxGeometry x="540" y="100" width="260" height="210" as="geometry" />
+        </mxCell>
+
+        <!-- CLASS: IssuingOrganization -->
+        <mxCell id="class_org" value="&lt;p style=&quot;margin:0px;padding-top:4px;text-align:center;&quot;&gt;&lt;b&gt;IssuingOrganization&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;- orgId: String&lt;br/&gt;- orgName: String&lt;br/&gt;- orgType: String&lt;br/&gt;- approvalStatus: String&lt;br/&gt;- approvedAt: DateTime&lt;br/&gt;- contactEmail: String&lt;/p&gt;&lt;hr/&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;+ submitRegistrationRequest(): Boolean&lt;br/&gt;+ registerDocument(meta, file): Document&lt;br/&gt;+ viewIssuedDocuments(): List&lt;br/&gt;+ revokeDocument(docId, reason): Boolean&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1.5;strokeColor=#2F5597;fillColor=#EDF2F8;" vertex="1" parent="1">
+          <mxGeometry x="140" y="380" width="270" height="190" as="geometry" />
+        </mxCell>
+
+        <!-- CLASS: Administrator -->
+        <mxCell id="class_admin" value="&lt;p style=&quot;margin:0px;padding-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Administrator&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;- adminLevel: String&lt;br/&gt;- department: String&lt;br/&gt;- lastLogin: DateTime&lt;/p&gt;&lt;hr/&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;+ approveOrganization(orgId): Boolean&lt;br/&gt;+ rejectOrganization(orgId, reason): Boolean&lt;br/&gt;+ manageUser(userId, action): Boolean&lt;br/&gt;+ manageDocument(docId, action): Boolean&lt;br/&gt;+ viewAllVerificationLogs(filter): List&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1.5;strokeColor=#2F5597;fillColor=#EDF2F8;" vertex="1" parent="1">
+          <mxGeometry x="930" y="380" width="270" height="190" as="geometry" />
+        </mxCell>
+
+        <!-- CLASS: Document -->
+        <mxCell id="class_document" value="&lt;p style=&quot;margin:0px;padding-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Document&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;- documentId: String&lt;br/&gt;- documentType: String&lt;br/&gt;- recipientName: String&lt;br/&gt;- issueDate: DateTime&lt;br/&gt;- storedHash: String&lt;br/&gt;- qrCodeData: String&lt;br/&gt;- status: String&lt;br/&gt;- registeredByOrgId: String&lt;/p&gt;&lt;hr/&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;+ getMetadata(): DocumentInfo&lt;br/&gt;+ computeHash(file): String&lt;br/&gt;+ updateStatus(newStatus): Boolean&lt;br/&gt;+ getVerificationUrl(): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1.5;strokeColor=#2F5597;fillColor=#EDF2F8;" vertex="1" parent="1">
+          <mxGeometry x="140" y="670" width="270" height="210" as="geometry" />
+        </mxCell>
+
+        <!-- CLASS: VerificationRequest -->
+        <mxCell id="class_request" value="&lt;p style=&quot;margin:0px;padding-top:4px;text-align:center;&quot;&gt;&lt;b&gt;VerificationRequest&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;- requestId: String&lt;br/&gt;- submissionType: String&lt;br/&gt;- submittedDocId: String&lt;br/&gt;- submittedFile: Object&lt;br/&gt;- requestTimestamp: DateTime&lt;br/&gt;- clientIpAddress: String&lt;br/&gt;- submittedByUserId: String&lt;/p&gt;&lt;hr/&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;+ validateInput(): Boolean&lt;br/&gt;+ extractVerificationId(): String&lt;br/&gt;+ initiateVerification(): VerificationLog&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1.5;strokeColor=#2F5597;fillColor=#EDF2F8;" vertex="1" parent="1">
+          <mxGeometry x="540" y="440" width="260" height="190" as="geometry" />
+        </mxCell>
+
+        <!-- CLASS: VerificationLog -->
+        <mxCell id="class_log" value="&lt;p style=&quot;margin:0px;padding-top:4px;text-align:center;&quot;&gt;&lt;b&gt;VerificationLog&lt;/b&gt;&lt;/p&gt;&lt;hr/&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;- logId: String&lt;br/&gt;- verificationId: String&lt;br/&gt;- timestamp: DateTime&lt;br/&gt;- verificationMethod: String&lt;br/&gt;- resultStatus: String&lt;br/&gt;- performedByUserId: String&lt;br/&gt;- hashCompared: Boolean&lt;br/&gt;- remarks: String&lt;/p&gt;&lt;hr/&gt;&lt;p style=&quot;margin:0px;margin-left:8px;text-align:left;&quot;&gt;+ recordLog(): Boolean&lt;br/&gt;+ getLogDetails(): LogEntry&lt;br/&gt;+ exportLog(): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1.5;strokeColor=#2F5597;fillColor=#EDF2F8;" vertex="1" parent="1">
+          <mxGeometry x="540" y="700" width="260" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- GENERALIZATION 1: IssuingOrganization -> User -->
+        <mxCell id="gen_org_user" value="" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="1" source="class_org" target="class_user">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="275" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- GENERALIZATION 2: Administrator -> User -->
+        <mxCell id="gen_admin_user" value="" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;strokeWidth=1.5;strokeColor=#2F5597;" edge="1" parent="1" source="class_admin" target="class_user">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1065" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ASSOCIATION 1: IssuingOrganization registers Document -->
+        <mxCell id="assoc_org_doc" value="registers" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#333333;" edge="1" parent="1" source="class_org" target="class_document">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_assoc_org_doc_src" value="1" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="assoc_org_doc">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint x="10" y="15" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_assoc_org_doc_tgt" value="0..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" connectable="0" vertex="1" parent="assoc_org_doc">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint x="10" y="-15" as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- ASSOCIATION 2: User submits VerificationRequest -->
+        <mxCell id="assoc_user_req" value="submits" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#333333;" edge="1" parent="1" source="class_user" target="class_request">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_assoc_user_req_src" value="0..1" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="assoc_user_req">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint x="15" y="10" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_assoc_user_req_tgt" value="0..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" connectable="0" vertex="1" parent="assoc_user_req">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint x="15" y="-10" as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- ASSOCIATION 3: VerificationRequest concerns Document -->
+        <mxCell id="assoc_req_doc" value="concerns" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#333333;" edge="1" parent="1" source="class_request" target="class_document">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_assoc_req_doc_src" value="0..*" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="assoc_req_doc">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint x="-15" y="15" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_assoc_req_doc_tgt" value="0..1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" connectable="0" vertex="1" parent="assoc_req_doc">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint x="15" y="-15" as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- ASSOCIATION 4: VerificationRequest generates VerificationLog -->
+        <mxCell id="assoc_req_log" value="generates" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#333333;" edge="1" parent="1" source="class_request" target="class_log">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_assoc_req_log_src" value="1" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="assoc_req_log">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint x="15" y="10" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_assoc_req_log_tgt" value="1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" connectable="0" vertex="1" parent="assoc_req_log">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint x="15" y="-10" as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- ASSOCIATION 5: Document referenced in VerificationLog -->
+        <mxCell id="assoc_doc_log" value="records result for" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#333333;" edge="1" parent="1" source="class_document" target="class_log">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_assoc_doc_log_src" value="0..1" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="assoc_doc_log">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint x="10" y="15" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_assoc_doc_log_tgt" value="0..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" connectable="0" vertex="1" parent="assoc_doc_log">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint x="-10" y="15" as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- ASSOCIATION 6: Administrator reviews VerificationLog -->
+        <mxCell id="assoc_admin_log" value="monitors / reviews" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#333333;" edge="1" parent="1" source="class_admin" target="class_log">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1065" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_assoc_admin_log_src" value="1" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="assoc_admin_log">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint x="-15" y="15" as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_assoc_admin_log_tgt" value="0..*" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" connectable="0" vertex="1" parent="assoc_admin_log">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint x="20" y="15" as="offset" /></mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

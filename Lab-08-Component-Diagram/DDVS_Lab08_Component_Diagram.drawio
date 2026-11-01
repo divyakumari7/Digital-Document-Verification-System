@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-11-01T22:30:00.000Z" agent="Mozilla/5.0" version="24.7.17" type="device">
+  <diagram id="ddvs-component-diagram" name="UML Component Diagram - DDVS">
+    <mxGraphModel dx="1400" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1450" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="UML COMPONENT DIAGRAM — DIGITAL DOCUMENT VERIFICATION SYSTEM (DDVS)" style="text;html=1;align=center;verticalAlign=middle;fontStyle=1;fontSize=18;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="250" y="20" width="950" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Software Engineering Practical Lab 08 | Logical Software Components, Provided/Required Interfaces &amp; Dependencies" style="text;html=1;align=center;verticalAlign=middle;fontStyle=2;fontSize=12;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="350" y="50" width="750" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- TIER PACKAGES / BOUNDARIES -->
+        <!-- Presentation Tier Package -->
+        <mxCell id="pkg_pres" value="Presentation Tier" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=140;tabHeight=25;tabPosition=left;html=1;fillColor=#F8FBFF;strokeColor=#2F5597;strokeWidth=1.5;fontSize=12;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="60" y="90" width="1330" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- Business Logic Tier Package -->
+        <mxCell id="pkg_app" value="Business Logic Tier (Application Server)" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=250;tabHeight=25;tabPosition=left;html=1;fillColor=#FDFEFE;strokeColor=#2F5597;strokeWidth=1.5;fontSize=12;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="60" y="310" width="1330" height="520" as="geometry" />
+        </mxCell>
+
+        <!-- Persistence Tier Package -->
+        <mxCell id="pkg_data" value="Data Persistence Tier" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=160;tabHeight=25;tabPosition=left;html=1;fillColor=#F8FBFF;strokeColor=#2F5597;strokeWidth=1.5;fontSize=12;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="60" y="870" width="1330" height="230" as="geometry" />
+        </mxCell>
+
+        <!-- COMPONENT 1: User Interface / Web Client -->
+        <mxCell id="c_ui" value="&amp;laquo;component&amp;raquo;&#xa;&lt;b&gt;User Interface / Web Client&lt;/b&gt;&#xa;&lt;hr/&gt;• Verifier Dashboard&#xa;• Document Issuance UI&#xa;• Admin Management Console" style="shape=module;align=left;spacingLeft=15;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=11;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="500" y="130" width="380" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- BUSINESS LOGIC COMPONENTS -->
+        <!-- Component 2: Account Management -->
+        <mxCell id="c_account" value="&amp;laquo;component&amp;raquo;&#xa;&lt;b&gt;Account Management&lt;/b&gt;&#xa;&lt;hr/&gt;• Registration &amp; Auth&#xa;• Credential Hashing&#xa;• Org Review &amp; Roles" style="shape=module;align=left;spacingLeft=15;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=10;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="90" y="370" width="220" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Component 3: Document Registration -->
+        <mxCell id="c_registration" value="&amp;laquo;component&amp;raquo;&#xa;&lt;b&gt;Document Registration&lt;/b&gt;&#xa;&lt;hr/&gt;• Metadata Ingestion&#xa;• ID / QR Generator&#xa;• Issuance Pipeline" style="shape=module;align=left;spacingLeft=15;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=10;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="360" y="370" width="230" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Component 4: Document Verification -->
+        <mxCell id="c_verification" value="&amp;laquo;component&amp;raquo;&#xa;&lt;b&gt;Document Verification&lt;/b&gt;&#xa;&lt;hr/&gt;• Query Dispatcher&#xa;• Status Evaluator&#xa;• Verdict Synthesis" style="shape=module;align=left;spacingLeft=15;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=10;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="640" y="370" width="240" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Component 5: Integrity Hash Processing -->
+        <mxCell id="c_hash" value="&amp;laquo;component&amp;raquo;&#xa;&lt;b&gt;Integrity Hash Processing&lt;/b&gt;&#xa;&lt;hr/&gt;• SHA-256 Checksum Engine&#xa;• Byte Stream Digest&#xa;• Tamper Comparison" style="shape=module;align=left;spacingLeft=15;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=10;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="490" y="580" width="260" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- Component 6: Verification Log Management -->
+        <mxCell id="c_log" value="&amp;laquo;component&amp;raquo;&#xa;&lt;b&gt;Verification Log Management&lt;/b&gt;&#xa;&lt;hr/&gt;• Immutable Audit Logger&#xa;• User History Provider&#xa;• Admin Audit Reporter" style="shape=module;align=left;spacingLeft=15;html=1;fillColor=#EDF2F8;strokeColor=#2F5597;strokeWidth=1.5;fontSize=10;fontColor=#17365D;" vertex="1" parent="1">
+          <mxGeometry x="930" y="370" width="240" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- PERSISTENCE COMPONENT -->
+        <!-- Component 7: Data Persistence / DB Access -->
+        <mxCell id="c_persistence" value="&amp;laquo;component&amp;raquo;&#xa;&lt;b&gt;Data Persistence / Database Access&lt;/b&gt;&#xa;&lt;hr/&gt;• UserStore Data Access Object (DAO)&#xa;• DocumentStore DAO&#xa;• VerificationLogStore DAO&#xa;• Transaction &amp; Connection Pool Manager" style="shape=module;align=left;spacingLeft=15;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;fontSize=11;fontColor=#7D6608;" vertex="1" parent="1">
+          <mxGeometry x="460" y="920" width="450" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- DEPENDENCIES & INTERFACES -->
+        <!-- UI -> IAccountService -> Account Component -->
+        <mxCell id="dep_ui_acc" value="&amp;laquo;use&amp;raquo; IAccountService" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#2F5597;fontSize=9;" edge="1" parent="1" source="c_ui" target="c_account">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="200" y="270" /></Array></mxGeometry>
+        </mxCell>
+
+        <!-- UI -> IRegistrationService -> Registration Component -->
+        <mxCell id="dep_ui_reg" value="&amp;laquo;use&amp;raquo; IRegistrationService" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#2F5597;fontSize=9;" edge="1" parent="1" source="c_ui" target="c_registration">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="475" y="290" /></Array></mxGeometry>
+        </mxCell>
+
+        <!-- UI -> IVerificationService -> Verification Component -->
+        <mxCell id="dep_ui_ver" value="&amp;laquo;use&amp;raquo; IVerificationService" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#2F5597;fontSize=9;" edge="1" parent="1" source="c_ui" target="c_verification">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="760" y="290" /></Array></mxGeometry>
+        </mxCell>
+
+        <!-- UI -> ILogService -> Log Component -->
+        <mxCell id="dep_ui_log" value="&amp;laquo;use&amp;raquo; ILogService" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#2F5597;fontSize=9;" edge="1" parent="1" source="c_ui" target="c_log">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1050" y="270" /></Array></mxGeometry>
+        </mxCell>
+
+        <!-- Registration Component -> IHashService -> Hash Component -->
+        <mxCell id="dep_reg_hash" value="&amp;laquo;use&amp;raquo; IHashService" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#2F5597;fontSize=9;" edge="1" parent="1" source="c_registration" target="c_hash">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="475" y="530" /></Array></mxGeometry>
+        </mxCell>
+
+        <!-- Verification Component -> IHashService -> Hash Component -->
+        <mxCell id="dep_ver_hash" value="&amp;laquo;use&amp;raquo; IHashService" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#2F5597;fontSize=9;" edge="1" parent="1" source="c_verification" target="c_hash">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="760" y="530" /></Array></mxGeometry>
+        </mxCell>
+
+        <!-- Verification Component -> ILogService -> Log Component -->
+        <mxCell id="dep_ver_log" value="&amp;laquo;use&amp;raquo; ILogService" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#2F5597;fontSize=9;" edge="1" parent="1" source="c_verification" target="c_log">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Components -> IDataAccess -> Persistence Component -->
+        <mxCell id="dep_acc_db" value="&amp;laquo;use&amp;raquo; IDataAccess" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#D6B656;fontSize=9;" edge="1" parent="1" source="c_account" target="c_persistence">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="200" y="800" /><mxPoint x="550" y="800" /></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="dep_reg_db" value="&amp;laquo;use&amp;raquo; IDataAccess" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#D6B656;fontSize=9;" edge="1" parent="1" source="c_registration" target="c_persistence">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="475" y="770" /><mxPoint x="630" y="770" /></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="dep_ver_db" value="&amp;laquo;use&amp;raquo; IDataAccess" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#D6B656;fontSize=9;" edge="1" parent="1" source="c_verification" target="c_persistence">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="760" y="770" /><mxPoint x="720" y="770" /></Array></mxGeometry>
+        </mxCell>
+
+        <mxCell id="dep_log_db" value="&amp;laquo;use&amp;raquo; IDataAccess" style="endArrow=open;dashed=1;html=1;strokeWidth=1.5;strokeColor=#D6B656;fontSize=9;" edge="1" parent="1" source="c_log" target="c_persistence">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1050" y="800" /><mxPoint x="800" y="800" /></Array></mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
