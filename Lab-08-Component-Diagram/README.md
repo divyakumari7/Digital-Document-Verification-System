@@ -8,6 +8,27 @@
 
 ---
 
+## Project and Team Information
+- **Project Title:** Digital Document Verification System (DDVS)
+- **Team Size:** 4 Members
+- **Project Team Members:**
+  1. Divya Kumari
+  2. Divyanshi Jaiswal
+  3. Divyanshi Khemani
+  4. Divyanshu Gupta
+- **Course / Subject:** B.Tech Computer Science & Engineering — Software Engineering Laboratory
+- **Authoritative Baseline:** IEEE-Standard SRS for DDVS v1.0 (August 31, 2026)
+
+---
+
+## Deliverables Summary and Moodle Submission Files
+- **Moodle Submission Document (DOCX):** [`DDVS_Lab08_Component_Diagram.docx`](DOCX/DDVS_Lab08_Component_Diagram.docx) *(Located in `DOCX/` subfolder with embedded diagram)*
+- **Editable Draw.io Diagram:** [`DDVS_Lab08_Component_Diagram.drawio`](DDVS_Lab08_Component_Diagram.drawio)
+- **Vector PDF Export:** [`DDVS_Lab08_Component_Diagram.pdf`](DDVS_Lab08_Component_Diagram.pdf)
+- **High-Resolution PNG Preview:** [`DDVS_Lab08_Component_Diagram.png`](DDVS_Lab08_Component_Diagram.png)
+
+---
+
 ## 3. Aim / Objective
 To design and model the high-level logical component architecture of the Digital Document Verification System (DDVS) using a standardized UML Component Diagram, identifying seven decoupled functional components across three architectural tiers (Presentation, Application Business Logic, and Data Persistence), formalizing provided and required interfaces (`IAccountService`, `IRegistrationService`, `IVerificationService`, `IHashService`, `ILogService`, `IDataAccess`), and evaluating subsystem dependencies.
 

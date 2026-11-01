@@ -8,6 +8,27 @@
 
 ---
 
+## Project and Team Information
+- **Project Title:** Digital Document Verification System (DDVS)
+- **Team Size:** 4 Members
+- **Project Team Members:**
+  1. Divya Kumari
+  2. Divyanshi Jaiswal
+  3. Divyanshi Khemani
+  4. Divyanshu Gupta
+- **Course / Subject:** B.Tech Computer Science & Engineering — Software Engineering Laboratory
+- **Authoritative Baseline:** IEEE-Standard SRS for DDVS v1.0 (August 31, 2026)
+
+---
+
+## Deliverables Summary and Moodle Submission Files
+- **Moodle Submission Document (DOCX):** [`DDVS_Lab07_State_Transition_Diagram.docx`](DOCX/DDVS_Lab07_State_Transition_Diagram.docx) *(Located in `DOCX/` subfolder with embedded diagram)*
+- **Editable Draw.io Diagram:** [`DDVS_Lab07_State_Transition_Diagram.drawio`](DDVS_Lab07_State_Transition_Diagram.drawio)
+- **Vector PDF Export:** [`DDVS_Lab07_State_Transition_Diagram.pdf`](DDVS_Lab07_State_Transition_Diagram.pdf)
+- **High-Resolution PNG Preview:** [`DDVS_Lab07_State_Transition_Diagram.png`](DDVS_Lab07_State_Transition_Diagram.png)
+
+---
+
 ## 3. Aim / Objective
 To model the reactive, event-driven state transitions of a document verification request within the Digital Document Verification System (DDVS) using a standardized UML State Machine Diagram, establishing formal states (`Idle`, `RequestReceived`, `RecordLookup`, `IntegrityChecking`, `StatusEvaluation`), deterministic guard-conditioned transitions, the four discrete terminal outcomes (`Verified`, `Tampered`, `Invalid`, `NotFound`), and final audit logging consolidation.
 

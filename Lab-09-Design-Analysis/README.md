@@ -8,6 +8,28 @@
 
 ---
 
+## Project and Team Information
+- **Project Title:** Digital Document Verification System (DDVS)
+- **Team Size:** 4 Members
+- **Project Team Members:**
+  1. Divya Kumari
+  2. Divyanshi Jaiswal
+  3. Divyanshi Khemani
+  4. Divyanshu Gupta
+- **Course / Subject:** B.Tech Computer Science & Engineering — Software Engineering Laboratory
+- **Authoritative Baseline:** IEEE-Standard SRS for DDVS v1.0 (August 31, 2026)
+
+---
+
+## Deliverables Summary and Moodle Submission Files
+- **Moodle Submission Document (DOCX):** [`DDVS_Lab09_Design_Analysis.docx`](DOCX/DDVS_Lab09_Design_Analysis.docx) *(Located in `DOCX/` subfolder with embedded architecture diagram)*
+- **Formal Academic Report (PDF):** [`DDVS_Lab09_Design_Analysis_Report.pdf`](DDVS_Lab09_Design_Analysis_Report.pdf)
+- **Editable Draw.io Diagram:** [`DDVS_Lab09_Architecture_Diagram.drawio`](DDVS_Lab09_Architecture_Diagram.drawio)
+- **Vector PDF Export:** [`DDVS_Lab09_Architecture_Diagram.pdf`](DDVS_Lab09_Architecture_Diagram.pdf)
+- **High-Resolution PNG Preview:** [`DDVS_Lab09_Architecture_Diagram.png`](DDVS_Lab09_Architecture_Diagram.png)
+
+---
+
 ## 3. Aim / Objective
 To conduct a comprehensive, academically rigorous software design analysis of the Digital Document Verification System (DDVS), evaluating its three-tier logical architecture, modular decomposition, intra-module cohesion, inter-subsystem coupling, non-functional quality attributes (maintainability, scalability, reliability, and security), and architectural constraints in accordance with established Software Engineering principles (IEEE and ISO/IEC 25010 standards).
 
@@ -73,10 +95,10 @@ The Digital Document Verification System is organized according to a strict **Th
 ```
 
 ### 6.2 Architectural Artifacts
-- **Editable Source**: [`DDVS_Lab09_Architecture_Diagram.drawio`](file:///e:/Digital-Document-Verification-System/Lab-09-Design-Analysis-Report/DDVS_Lab09_Architecture_Diagram.drawio)
-- **Vector Document**: [`DDVS_Lab09_Architecture_Diagram.pdf`](file:///e:/Digital-Document-Verification-System/Lab-09-Design-Analysis-Report/DDVS_Lab09_Architecture_Diagram.pdf)
-- **High-Resolution Graphic**: [`DDVS_Lab09_Architecture_Diagram.png`](file:///e:/Digital-Document-Verification-System/Lab-09-Design-Analysis-Report/DDVS_Lab09_Architecture_Diagram.png)
-- **Formal Academic Report PDF**: [`DDVS_Lab09_Design_Analysis_Report.pdf`](file:///e:/Digital-Document-Verification-System/Lab-09-Design-Analysis-Report/DDVS_Lab09_Design_Analysis_Report.pdf)
+- **Editable Source**: [`DDVS_Lab09_Architecture_Diagram.drawio`](DDVS_Lab09_Architecture_Diagram.drawio)
+- **Vector Document**: [`DDVS_Lab09_Architecture_Diagram.pdf`](DDVS_Lab09_Architecture_Diagram.pdf)
+- **High-Resolution Graphic**: [`DDVS_Lab09_Architecture_Diagram.png`](DDVS_Lab09_Architecture_Diagram.png)
+- **Formal Academic Report PDF**: [`DDVS_Lab09_Design_Analysis_Report.pdf`](DDVS_Lab09_Design_Analysis_Report.pdf)
 
 ![Architecture Diagram](DDVS_Lab09_Architecture_Diagram.png)
 
@@ -186,7 +208,7 @@ A rigorous academic evaluation requires acknowledging current design constraints
 ### 10.1 Result
 A complete Software Design Analysis Report for the Digital Document Verification System was authored, supported by:
 1. A formal 3-Tier Logical Architecture Diagram exported in `.drawio`, `.pdf`, and `.png` formats.
-2. An exhaustive 5-page formal academic report compiled to publication standards in [`DDVS_Lab09_Design_Analysis_Report.pdf`](file:///e:/Digital-Document-Verification-System/Lab-09-Design-Analysis-Report/DDVS_Lab09_Design_Analysis_Report.pdf).
+2. An exhaustive 5-page formal academic report compiled to publication standards in [`DDVS_Lab09_Design_Analysis_Report.pdf`](DDVS_Lab09_Design_Analysis_Report.pdf).
 3. Detailed evaluations of Modularity, Cohesion, Coupling, Maintainability, Scalability, Reliability, and Security.
 
 ### 10.2 Conclusion

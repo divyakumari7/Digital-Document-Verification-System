@@ -8,6 +8,33 @@
 
 ---
 
+## Project and Team Information
+- **Project Title:** Digital Document Verification System (DDVS)
+- **Team Size:** 4 Members
+- **Project Team Members:**
+  1. Divya Kumari
+  2. Divyanshi Jaiswal
+  3. Divyanshi Khemani
+  4. Divyanshu Gupta
+- **Course / Subject:** B.Tech Computer Science & Engineering — Software Engineering Laboratory
+- **Authoritative Baseline:** IEEE-Standard SRS for DDVS v1.0 (August 31, 2026)
+
+---
+
+## Deliverables Summary and Moodle Submission Files
+- **Moodle Submission Document (DOCX):** [`DDVS_Lab05_Data_Flow_Diagram.docx`](DOCX/DDVS_Lab05_Data_Flow_Diagram.docx) *(Located in `DOCX/` subfolder with embedded diagrams)*
+- **Editable Draw.io Source Models:**
+  - Context Diagram: [`DDVS_Lab05_Context_Diagram.drawio`](DDVS_Lab05_Context_Diagram.drawio)
+  - Level 1 DFD: [`DDVS_Lab05_Level1_DFD.drawio`](DDVS_Lab05_Level1_DFD.drawio)
+- **Vector PDF Exports:**
+  - Context Diagram: [`DDVS_Lab05_Context_Diagram.pdf`](DDVS_Lab05_Context_Diagram.pdf)
+  - Level 1 DFD: [`DDVS_Lab05_Level1_DFD.pdf`](DDVS_Lab05_Level1_DFD.pdf)
+- **High-Resolution PNG Previews:**
+  - Context Diagram: [`DDVS_Lab05_Context_Diagram.png`](DDVS_Lab05_Context_Diagram.png)
+  - Level 1 DFD: [`DDVS_Lab05_Level1_DFD.png`](DDVS_Lab05_Level1_DFD.png)
+
+---
+
 ## 3. Aim / Objective
 To model the functional decomposition and information transformation within the Digital Document Verification System (DDVS) by designing:
 1. A **Context Diagram (Level 0 DFD)** defining external entity boundaries and high-level data exchanges.

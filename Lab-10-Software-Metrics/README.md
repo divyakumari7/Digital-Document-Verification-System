@@ -8,6 +8,28 @@
 
 ---
 
+## Project and Team Information
+- **Project Title:** Digital Document Verification System (DDVS)
+- **Team Size:** 4 Members
+- **Project Team Members:**
+  1. Divya Kumari
+  2. Divyanshi Jaiswal
+  3. Divyanshi Khemani
+  4. Divyanshu Gupta
+- **Course / Subject:** B.Tech Computer Science & Engineering — Software Engineering Laboratory
+- **Authoritative Baseline:** IEEE-Standard SRS for DDVS v1.0 (August 31, 2026)
+
+---
+
+## Deliverables Summary and Moodle Submission Files
+- **Moodle Submission Document (DOCX):** [`DDVS_Lab10_Software_Metrics.docx`](DOCX/DDVS_Lab10_Software_Metrics.docx) *(Located in `DOCX/` subfolder with embedded CFG diagram)*
+- **Formal Academic Report (PDF):** [`DDVS_Lab10_Software_Metrics_Report.pdf`](DDVS_Lab10_Software_Metrics_Report.pdf)
+- **Editable Draw.io Diagram:** [`DDVS_Lab10_Control_Flow_Graph.drawio`](DDVS_Lab10_Control_Flow_Graph.drawio)
+- **Vector PDF Export:** [`DDVS_Lab10_Control_Flow_Graph.pdf`](DDVS_Lab10_Control_Flow_Graph.pdf)
+- **High-Resolution PNG Preview:** [`DDVS_Lab10_Control_Flow_Graph.png`](DDVS_Lab10_Control_Flow_Graph.png)
+
+---
+
 ## 3. Aim / Objective
 To quantitatively analyze the algorithmic and structural complexity of the Digital Document Verification System (DDVS) by:
 1. Constructing a formal **Control Flow Graph (CFG)** of the core document verification workflow.
@@ -148,10 +170,10 @@ McCabe's theorem states that $V(G)$ defines the maximum number of linearly indep
 ---
 
 ### 7.4 Control Flow Graph Artifacts
-- **Editable Source**: [`DDVS_Lab10_Control_Flow_Graph.drawio`](file:///e:/Digital-Document-Verification-System/Lab-10-Software-Metrics-and-Complexity/DDVS_Lab10_Control_Flow_Graph.drawio)
-- **Vector Document**: [`DDVS_Lab10_Control_Flow_Graph.pdf`](file:///e:/Digital-Document-Verification-System/Lab-10-Software-Metrics-and-Complexity/DDVS_Lab10_Control_Flow_Graph.pdf)
-- **High-Resolution Graphic**: [`DDVS_Lab10_Control_Flow_Graph.png`](file:///e:/Digital-Document-Verification-System/Lab-10-Software-Metrics-and-Complexity/DDVS_Lab10_Control_Flow_Graph.png)
-- **Formal Academic Report PDF**: [`DDVS_Lab10_Software_Metrics_Report.pdf`](file:///e:/Digital-Document-Verification-System/Lab-10-Software-Metrics-and-Complexity/DDVS_Lab10_Software_Metrics_Report.pdf)
+- **Editable Source**: [`DDVS_Lab10_Control_Flow_Graph.drawio`](DDVS_Lab10_Control_Flow_Graph.drawio)
+- **Vector Document**: [`DDVS_Lab10_Control_Flow_Graph.pdf`](DDVS_Lab10_Control_Flow_Graph.pdf)
+- **High-Resolution Graphic**: [`DDVS_Lab10_Control_Flow_Graph.png`](DDVS_Lab10_Control_Flow_Graph.png)
+- **Formal Academic Report PDF**: [`DDVS_Lab10_Software_Metrics_Report.pdf`](DDVS_Lab10_Software_Metrics_Report.pdf)
 
 ![Control Flow Graph](DDVS_Lab10_Control_Flow_Graph.png)
 
@@ -230,7 +252,7 @@ To ensure software complexity does not escalate during implementation:
 ## 12. Result and Conclusion
 
 ### 12.1 Result
-A complete quantitative Software Metrics and Complexity Analysis of DDVS was executed. The verification engine was formally modeled as a Control Flow Graph ($N=14, E=17$), proving McCabe's Cyclomatic Complexity $V(G) = 5$ across five linearly independent basis paths. Object-oriented CK metrics were computed from the UML Class Diagram, and a 5-page formal report was compiled in [`DDVS_Lab10_Software_Metrics_Report.pdf`](file:///e:/Digital-Document-Verification-System/Lab-10-Software-Metrics-and-Complexity/DDVS_Lab10_Software_Metrics_Report.pdf).
+A complete quantitative Software Metrics and Complexity Analysis of DDVS was executed. The verification engine was formally modeled as a Control Flow Graph ($N=14, E=17$), proving McCabe's Cyclomatic Complexity $V(G) = 5$ across five linearly independent basis paths. Object-oriented CK metrics were computed from the UML Class Diagram, and a 5-page formal report was compiled in [`DDVS_Lab10_Software_Metrics_Report.pdf`](DDVS_Lab10_Software_Metrics_Report.pdf).
 
 ### 12.2 Conclusion
 The complexity analysis confirms that the architectural and algorithmic design of DDVS is structurally sound, mathematically concise, and highly testable. By maintaining low cyclomatic complexity, shallow inheritance, and low object coupling, the design establishes high maintainability and lays a solid foundation for physical software construction.

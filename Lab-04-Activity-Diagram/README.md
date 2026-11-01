@@ -8,6 +8,27 @@
 
 ---
 
+## Project and Team Information
+- **Project Title:** Digital Document Verification System (DDVS)
+- **Team Size:** 4 Members
+- **Project Team Members:**
+  1. Divya Kumari
+  2. Divyanshi Jaiswal
+  3. Divyanshi Khemani
+  4. Divyanshu Gupta
+- **Course / Subject:** B.Tech Computer Science & Engineering — Software Engineering Laboratory
+- **Authoritative Baseline:** IEEE-Standard SRS for DDVS v1.0 (August 31, 2026)
+
+---
+
+## Deliverables Summary and Moodle Submission Files
+- **Moodle Submission Document (DOCX):** [`DDVS_Lab04_Activity_Diagram.docx`](DOCX/DDVS_Lab04_Activity_Diagram.docx) *(Located in `DOCX/` subfolder with embedded diagram)*
+- **Editable Draw.io Diagram:** [`DDVS_Lab04_Activity_Diagram.drawio`](DDVS_Lab04_Activity_Diagram.drawio)
+- **Vector PDF Export:** [`DDVS_Lab04_Activity_Diagram.pdf`](DDVS_Lab04_Activity_Diagram.pdf)
+- **High-Resolution PNG Preview:** [`DDVS_Lab04_Activity_Diagram.png`](DDVS_Lab04_Activity_Diagram.png)
+
+---
+
 ## 3. Aim / Objective
 To model the dynamic, step-by-step procedural workflow of document verification in the Digital Document Verification System (DDVS) using a partitioned UML Activity Diagram with swimlanes, accurately capturing multi-channel input handling (Verification ID, QR code, and digital file upload), branch decision logic (record lookup, cryptographic hash matching, and record revocation state), and comprehensive audit logging.
 
